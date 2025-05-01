@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background: #000000;
-    color: #ffffff;
+    background: #120700;
+    color: #ffcc99;
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,26 +13,37 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .container {
     width: 90%;
     max-width: 600px;
     padding: 30px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(60, 20, 5, 0.7);
     border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(255, 143, 43, 0.3);
     backdrop-filter: blur(12px);
     text-align: center;
     animation: slideIn 0.8s ease-in-out;
     transform: translateY(-20px);
+    border: 1px solid rgba(255, 100, 10, 0.3);
 }
 
 h1 {
     margin-bottom: 20px;
     font-size: 32px;
-    color: #ffffff;
+    color: #ff8c42;
     text-transform: uppercase;
     letter-spacing: 3px;
     animation: fadeIn 1.2s ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
 }
 
 .search-container {
@@ -54,21 +65,22 @@ h1 {
     border: none;
     border-radius: 12px;
     font-size: 16px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    background: rgba(40, 10, 0, 0.6);
+    color: #ffcc99;
     outline: none;
     transition: all 0.3s ease;
     text-align: center;
+    border: 1px solid rgba(255, 100, 10, 0.3);
 }
 
 #urlInput::placeholder {
-    color: #cccccc;
+    color: #cc9966;
     font-style: italic;
 }
 
 #urlInput:focus {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+    background: rgba(60, 20, 5, 0.8);
+    box-shadow: 0 0 12px rgba(255, 143, 43, 0.5);
 }
 
 button {
@@ -79,33 +91,39 @@ button {
     font-size: 16px;
     font-weight: bold;
     transition: all 0.3s ease;
-    color: #000000;
-    background: #ffffff;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    color: #120700;
+    background: linear-gradient(135deg, #ff8c42, #ff5722);
+    box-shadow: 0 4px 15px rgba(255, 143, 43, 0.4);
 }
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 20px rgba(255, 143, 43, 0.6), 0 0 20px rgba(255, 80, 0, 0.4);
+    background: linear-gradient(135deg, #ffa653, #ff7842);
+    animation: ember-pulse 2s infinite;
+}
+
+@keyframes ember-pulse {
+    0% { box-shadow: 0 6px 20px rgba(255, 143, 43, 0.6), 0 0 20px rgba(255, 80, 0, 0.4); }
+    50% { box-shadow: 0 6px 30px rgba(255, 143, 43, 0.8), 0 0 30px rgba(255, 100, 0, 0.6); }
+    100% { box-shadow: 0 6px 20px rgba(255, 143, 43, 0.6), 0 0 20px rgba(255, 80, 0, 0.4); }
 }
 
 #searchButton {
-    background: #ffffff;
+    background: linear-gradient(135deg, #ff8c42, #ff5722);
 }
 
 #searchButton:hover {
-    background: #e6e6e6;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, #ffa653, #ff7842);
 }
 
 #openNewTab {
-    background: #ffffff;
+    background: linear-gradient(135deg, #ff8c42, #ff5722);
     width: 100%;
 }
 
 #openNewTab:hover {
-    background: #e6e6e6;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(135deg, #ffa653, #ff7842);
 }
 
 .modal {
@@ -115,7 +133,7 @@ button:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(18, 7, 0, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,13 +146,14 @@ button:hover {
     width: 90%;
     max-width: 800px;
     height: 80%;
-    background: #000000;
+    background: #1a0d00;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(255, 143, 43, 0.3);
     animation: slideIn 0.5s ease-in-out;
+    border: 1px solid rgba(255, 100, 10, 0.3);
 }
 
 .close {
@@ -143,13 +162,13 @@ button:hover {
     right: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #ffffff;
+    color: #ff8c42;
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .close:hover {
-    color: #ff4d4d;
+    color: #ff5722;
 }
 
 .iframeWindow {
@@ -157,7 +176,7 @@ button:hover {
     width: 100%;
     height: 100%;
     border: none;
-    background: #000000;
+    background: #ffffff;
 }
 
 @keyframes fadeIn {
@@ -178,5 +197,17 @@ button:hover {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@keyframes flicker {
+    0% { text-shadow: 0 0 5px rgba(255, 80, 0, 0.6); }
+    25% { text-shadow: 0 0 10px rgba(255, 80, 0, 0.8); }
+    50% { text-shadow: 0 0 7px rgba(255, 80, 0, 0.6); }
+    75% { text-shadow: 0 0 12px rgba(255, 80, 0, 0.8); }
+    100% { text-shadow: 0 0 5px rgba(255, 80, 0, 0.6); }
+}
+
+h1 {
+    animation: flicker 3s infinite;
 }
 

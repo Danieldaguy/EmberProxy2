@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,9 @@
     
     <script src="/uv/uv.bundle.js"></script>
     <script src="/uv/uv.config.js"></script>
+
+    <!-- Particles.js for ember effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
     <script>
         if ("serviceWorker" in navigator) {
@@ -21,9 +25,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Particles container -->
+    <div id="particles-js"></div>
 
     <div class="container">
-        <h1>Kulid Browsing</h1>
+        <h1>Ember Unblocker😎</h1>
         <div class="search-container">
             <input type="text" id="urlInput" placeholder="Enter URL or search...">
             <button id="searchButton">Go</button>
@@ -38,6 +44,7 @@
         </div>
     </div>
 
+    <script src="particles-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
