@@ -1,16 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kulid Browsing</title>
+    <title>Ember Browsing</title>
     
     <script src="/uv/uv.bundle.js"></script>
     <script src="/uv/uv.config.js"></script>
 
     <!-- Particles.js for ember effect -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Google Material Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <script>
         if ("serviceWorker" in navigator) {
@@ -27,14 +29,36 @@
 <body>
     <!-- Particles container -->
     <div id="particles-js"></div>
-
-    <div class="container">
-        <h1>Ember Unblocker😎</h1>
-        <div class="search-container">
-            <input type="text" id="urlInput" placeholder="Enter URL or search...">
-            <button id="searchButton">Go</button>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Bookmarks</a>
+            <a href="#" class="nav-link">History</a>
         </div>
-        <button id="openNewTab">Open Link in About:Blank Cloak</button>
+        <div class="nav-right">
+            <a href="#" class="nav-link"><i class="fas fa-cog"></i></a>
+            <a href="#" class="nav-link"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="logo-container">
+            <h1>Kulid</h1>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="urlInput" placeholder="Enter URL or search...">
+                <i class="fas fa-microphone mic-icon"></i>
+            </div>
+            <div class="buttons-container">
+                <button id="searchButton">Search</button>
+                <button id="openNewTab">Open in About:Blank</button>
+            </div>
+        </div>
     </div>
 
     <div id="modal" class="modal">
